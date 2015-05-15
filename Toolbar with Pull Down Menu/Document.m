@@ -52,4 +52,23 @@
     return YES;
 }
 
+- (IBAction)pullDownAction:(id)sender {
+    
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+    NSPopUpButton *button = (NSPopUpButton*)sender;
+    
+    // Loop thorugh all menu items and toggle on the selected item
+    NSMenuItem *selectedItem = [button selectedItem];
+    [selectedItem setState:NSOnState];
+    for (NSMenuItem *item in button.menu.itemArray) {
+        
+        if (selectedItem != item) {
+            [item setState:NSOffState];
+        }
+    }
+    
+    NSLog(@"%@", selectedItem);
+    
+}
+
 @end

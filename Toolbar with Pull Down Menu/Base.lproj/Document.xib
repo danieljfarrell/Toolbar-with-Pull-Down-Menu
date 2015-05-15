@@ -42,24 +42,28 @@
                     <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="JBh-jG-5wp"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="KMT-pK-h38"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="cuJ-Ow-JUn"/>
-                    <toolbarItem implicitItemIdentifier="29CF4836-8381-440A-A01B-13422711A518" label="Custom View" paletteLabel="Custom View" image="NSCaution" id="LCn-CL-G7O">
+                    <toolbarItem implicitItemIdentifier="29CF4836-8381-440A-A01B-13422711A518" label="Custom View" paletteLabel="Custom View" image="NSComputer" id="LCn-CL-G7O">
                         <nil key="toolTip"/>
                         <size key="minSize" width="100" height="28"/>
-                        <size key="maxSize" width="100" height="28"/>
+                        <size key="maxSize" width="149" height="28"/>
                         <popUpButton key="view" verticalHuggingPriority="750" id="2dY-pE-it2">
-                            <rect key="frame" x="0.0" y="0.0" width="100" height="28"/>
+                            <rect key="frame" x="0.0" y="14" width="141" height="28"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <popUpButtonCell key="cell" type="roundTextured" title="Item 1" bezelStyle="texturedRounded" image="NSAddTemplate" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" selectedItem="yaS-r1-GuL" id="vXF-Kw-4lU">
+                            <popUpButtonCell key="cell" type="roundTextured" title=" Fixed image" bezelStyle="texturedRounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" pullsDown="YES" selectedItem="bws-RA-qXE" id="vXF-Kw-4lU">
                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                 <font key="font" metaFont="menu"/>
                                 <menu key="menu" id="yNn-0j-IlU">
                                     <items>
-                                        <menuItem title="Item 1" state="on" image="NSCaution" id="yaS-r1-GuL"/>
-                                        <menuItem title="Item 2" id="YlZ-HA-PlD"/>
-                                        <menuItem title="Item 3" id="d9l-m3-u3O"/>
+                                        <menuItem title=" Fixed image" image="NSComputer" hidden="YES" id="yaS-r1-GuL"/>
+                                        <menuItem title="Option #1" state="on" image="NSColorPanel" id="YlZ-HA-PlD"/>
+                                        <menuItem title="Option #2" image="NSEveryone" id="d9l-m3-u3O"/>
+                                        <menuItem title="Option #3" image="NSFontPanel" id="bws-RA-qXE"/>
                                     </items>
                                 </menu>
                             </popUpButtonCell>
+                            <connections>
+                                <action selector="pullDownAction:" target="-2" id="nxh-xS-8or"/>
+                            </connections>
                         </popUpButton>
                     </toolbarItem>
                 </allowedToolbarItems>
@@ -74,10 +78,13 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-x8E"/>
             </connections>
+            <point key="canvasLocation" x="323.5" y="337.5"/>
         </window>
     </objects>
     <resources>
-        <image name="NSAddTemplate" width="11" height="11"/>
-        <image name="NSCaution" width="32" height="32"/>
+        <image name="NSColorPanel" width="32" height="32"/>
+        <image name="NSComputer" width="32" height="32"/>
+        <image name="NSEveryone" width="32" height="32"/>
+        <image name="NSFontPanel" width="32" height="32"/>
     </resources>
 </document>
